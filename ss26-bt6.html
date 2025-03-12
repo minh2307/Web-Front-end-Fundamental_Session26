@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = ["2025-03-10", "2024-12-25", "2023-07-01"];
+        if (typeof a === 'string') {
+            console.log('Dữ liệu không hợp lệ');
+
+        } else {
+            let check = a.map(item => {
+                let newA = item.split('-');
+                return `${newA[2]}/${newA[1]}/${newA[0]}`;
+            }
+            );
+            console.log(a.length ? check : "Mảng không có phần tử nào");
+        }
+    </script>
+</body>
+
+</html>
