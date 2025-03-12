@@ -9,20 +9,22 @@
 
 <body>
     <script>
-        let a = [];
-        for (let i = 0; i < 10; i++) {
-            a.push(+prompt(`Mời Bạn Nhập phần tử thứ ${i + 1} trong mảng: `));
-            if (isNaN(a[i])) {
-                console.log('Dữ liệu không hợp lệ');
-                a = null;
-                break;
-            }
+        let a = [10, 9, 5, 11, 24, 5];
+        // for (let i = 0; i < 10; i++) {
+        //     a.push(+prompt(`Mời Bạn Nhập phần tử thứ ${i + 1} trong mảng: `));
+        //     if (isNaN(a[i])) {
+        //         console.log('Dữ liệu không hợp lệ');
+        //         a = null;
+        //         break;
+        //     }
+        // }
+        if (a !== null) {
+            let check = a.reduce(function (max, curr) {
+                return max < curr ? curr : max;
+            }, a[0]);
+            let position = a.indexOf(check);
+            console.log(check.length ? `max: ${max} <br> position: ${position}` : "Mảng không có dữ liệu");
         }
-        let check = a.reduce(function (max, curr) {
-            return max < curr ? curr : max;
-        }, a[0]);
-        console.log(check.length);
-
     </script>
 </body>
 
