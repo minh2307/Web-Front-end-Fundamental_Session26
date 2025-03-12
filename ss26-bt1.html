@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = [];
+        for (let i = 0; i < 10; i++) {
+            a.push(+prompt(`Mời bạn nhập phần tử thứ ${i + 1}: `));
+            if (isNaN(a[i])) {
+                console.log(`Dữ liệu không hợp lệ`);
+                a = null;
+                break;
+
+            }
+        }
+        if (a !== null) {
+            let check = a.filter((num) => num >= 10);
+            console.log(check.length ? check : 'Mảng không có phần tử nào');
+        }
+    </script>
+</body>
+
+</html>
